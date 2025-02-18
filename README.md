@@ -1,3 +1,5 @@
+![app.png](readme/app.png)
+
 # MQTT Automatic ON/OFF switch for Headphone Power Amplifier K11 - FiiO
 This was more for a convenience than anything else.  
 This is an engineering approach to a problem that I had with my Headphone Power Amplifier K11 - FiiO.  
