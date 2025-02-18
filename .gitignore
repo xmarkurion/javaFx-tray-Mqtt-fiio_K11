@@ -1,3 +1,7 @@
+## Ignore resources
+svcl.chm
+svcl.exe
+
 ## Ignore out folder
 out/
 config.properties
