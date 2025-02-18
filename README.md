@@ -4,7 +4,10 @@ This is an engineering approach to a problem that I had with my Headphone Power 
 Why just press and hold the off button for 5 second to turn it off when you can do it automatically?
 So in total i spend around few hours to make an app that will do this for me.
 
-### Time
+## Codiing video
+[<img src="https://img.youtube.com/vi/1Z92DV6d4HA/maxresdefault.jpg" width="50%">](https://youtu.be/1Z92DV6d4HA)
+
+## Time
 It took me 10 hours to make this app.
 So after 7200 turn on and off, I will be in profit.
 

@@ -39,7 +39,6 @@ public class TrayGui {
 
         MenuItem exitItem = new MenuItem("Exit");
         exitItem.addActionListener(e -> {
-//            Platform.exit();
             System.exit(0);
         });
 
