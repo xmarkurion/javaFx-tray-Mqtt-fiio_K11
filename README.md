@@ -4,7 +4,6 @@ This is an engineering approach to a problem that I had with my Headphone Power 
 Why just press and hold the off button for 5 second to turn it off when you can do it automatically?
 So in total i spend around few hours to make an app that will do this for me.
 
-
 ## Problem
 - The K11 has a power button that you need to press and hold for 5 seconds to turn it off.
 - It's annoying to do it every time you want to turn it off.
@@ -23,3 +22,8 @@ So in total i spend around few hours to make an app that will do this for me.
 - Use [nirsoft audio switcher](https://www.nirsoft.net/utils/sound_volume_command_line.html) to switch source audio device in window.
 - Use custom threading to parallel run process to check currently ran audio source.
 - Pack it all in a jar file and run it on startup.
+
+## How to use
+- Make sure you do have SDK [liberica-full-23](https://bell-sw.com/pages/downloads/#jdk-23) or above installed.
+- Download the jar file from the release.
+- Run the jar using bat file.
