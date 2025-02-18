@@ -4,6 +4,10 @@ This is an engineering approach to a problem that I had with my Headphone Power 
 Why just press and hold the off button for 5 second to turn it off when you can do it automatically?
 So in total i spend around few hours to make an app that will do this for me.
 
+### Time
+It took me 10 hours to make this app.
+So after 7200 turn on and off, I will be in profit.
+
 ## Problem
 - The K11 has a power button that you need to press and hold for 5 seconds to turn it off.
 - It's annoying to do it every time you want to turn it off.
