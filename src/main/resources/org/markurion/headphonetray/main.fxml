@@ -37,6 +37,7 @@
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Blend?>
 <?import javafx.scene.effect.Glow?>
@@ -73,8 +74,8 @@
                   </Label>
                   <ChoiceBox fx:id="select" layoutX="200.0" layoutY="15.0" prefHeight="25.0" prefWidth="393.0" />
                   <TextField fx:id="mqtt_topic" layoutX="200.0" layoutY="88.0" prefHeight="25.0" prefWidth="393.0" />
-                  <TextField fx:id="mqtt_on" layoutX="200.0" layoutY="132.0" prefHeight="25.0" prefWidth="393.0" />
-                  <TextField fx:id="mqtt_off" layoutX="200.0" layoutY="178.0" prefHeight="25.0" prefWidth="393.0" />
+                  <TextField fx:id="mqtt_on" layoutX="200.0" layoutY="132.0" prefHeight="25.0" prefWidth="126.0" />
+                  <TextField fx:id="mqtt_off" layoutX="200.0" layoutY="178.0" prefHeight="25.0" prefWidth="122.0" />
                   <CheckBox fx:id="checkBox" layoutX="38.0" layoutY="254.0" mnemonicParsing="false" text="Send OFF signal on app close">
                      <font>
                         <Font size="14.0" />
@@ -107,6 +108,23 @@
                      </font>
                   </Label>
                   <Button fx:id="btn_connect" layoutX="523.0" layoutY="51.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="69.0" text="Connect" />
+                  <Label alignment="TOP_RIGHT" layoutX="335.0" layoutY="131.0" prefHeight="27.0" prefWidth="145.0" style="&#10;" text="MQTT Login" textAlignment="RIGHT" wrapText="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_RIGHT" layoutX="335.0" layoutY="176.0" prefHeight="27.0" prefWidth="145.0" style="&#10;" text="MQTT Password" textAlignment="RIGHT" wrapText="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="login" layoutX="497.0" layoutY="132.0" prefHeight="25.0" prefWidth="122.0" />
+                  <PasswordField fx:id="password" layoutX="497.0" layoutY="177.0" prefHeight="25.0" prefWidth="122.0" />
+                  <CheckBox fx:id="checkBox_ON" layoutX="38.0" layoutY="233.0" mnemonicParsing="false" text="Send ON signal on app reopen">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </CheckBox>
                </children>
             </Pane>
       </children>

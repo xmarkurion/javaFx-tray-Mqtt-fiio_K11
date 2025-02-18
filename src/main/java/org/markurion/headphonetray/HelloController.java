@@ -25,8 +25,12 @@ public class HelloController {
     TextField mqtt_on;
     @FXML
     TextField mqtt_off;
+    @FXML PasswordField login;
+    @FXML PasswordField password;
+
     @FXML
     CheckBox checkBox;
+    @FXML CheckBox checkBox_ON;
     @FXML
     Label statusBar;
     @FXML Label label_current_dev;
@@ -49,6 +53,8 @@ public class HelloController {
 
         // Instantiate the helper class to help with the logic
         helper = new Helper(this);
+
+        // Load config and connect to MQTT
         helper.loadConfigFile();
         helper.fillAvailableDevices();
 
@@ -93,6 +99,9 @@ public class HelloController {
                 helper.activeUsedSoundDevice();
             });
         }, 0, 1, TimeUnit.SECONDS);
+
+        //After loader is fully loaded
+        Platform.runLater(this::tunOn);
     }
 
     public void turnOff() {
@@ -100,6 +109,14 @@ public class HelloController {
         if(checkBox.isSelected()){
             System.out.println("Sending off message to turn off the AMP");
             helper.sentShutdownCommand();
+        }
+    }
+
+    public void tunOn() {
+        // if checkbox selected send on command
+        if(checkBox_ON.isSelected()){
+            System.out.println("Sending on message to turn on the AMP");
+            helper.sentStartCommand();
         }
     }
 

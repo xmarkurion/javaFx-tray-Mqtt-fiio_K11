@@ -3,13 +3,9 @@ package org.markurion.headphonetray;
 import javafx.application.Platform;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.jetbrains.annotations.NotNull;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.SQLOutput;
-import java.util.Timer;
+
 
 public class Helper {
     private boolean attempt = false;
@@ -49,6 +45,7 @@ public class Helper {
                 configFile.getProperty("mqtt_off") == "" ||
                 configFile.getProperty("device") == "" ||
                 configFile.getProperty("checkBox") == "" ||
+                configFile.getProperty("checkBox_ON") == "" ||
                 configFile.getProperty("username") == "" ||
                 configFile.getProperty("password") == "")
         {
@@ -89,7 +86,10 @@ public class Helper {
             configFile.setProperty("mqtt_on", controller.mqtt_on.getText());
             configFile.setProperty("mqtt_off", controller.mqtt_off.getText());
             configFile.setProperty("device", controller.select.getValue().toString());
+            configFile.setProperty("username", controller.login.getText());
+            configFile.setProperty("password", controller.password.getText());
             configFile.setProperty("checkBox", controller.checkBox.isSelected() ? "true" : "false");
+            configFile.setProperty("checkBox_ON", controller.checkBox_ON.isSelected() ? "true" : "false");
             configFile.save();
         } catch (ConfigFile.ConfigFileException e) {
             e.printStackTrace();
@@ -117,12 +117,16 @@ public class Helper {
             controller.select.setValue(device);
             soundDeviceChecker = new SoundDeviceChecker(device);
 
+            // Set the checkbox to true if the value is true
             controller.checkBox.setSelected(configFile.getProperty("checkBox").equals("true"));
+            controller.checkBox_ON.setSelected(configFile.getProperty("checkBox_ON").equals("true"));
 
             if(configFile.getProperty("username") == null || configFile.getProperty("password") == null){
                 return false;
             }
 
+            controller.login.setText(configFile.getProperty("username"));
+            controller.password.setText(configFile.getProperty("password"));
             username = configFile.getProperty("username");
             password = configFile.getProperty("password");
 

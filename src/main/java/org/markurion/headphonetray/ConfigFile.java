@@ -54,6 +54,7 @@ public class ConfigFile {
                 properties.setProperty("mqtt_off", "");
                 properties.setProperty("device", "");
                 properties.setProperty("checkBox", "");
+                properties.setProperty("checkBox_ON", "");
                 properties.setProperty("username", "");
                 properties.setProperty("password", "");
                 properties.store(new FileOutputStream(configFilePath), null);
